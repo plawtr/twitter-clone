@@ -83,14 +83,15 @@ body {
 	height: 30px;
 	border-radius: 2em;
 	background-color: rgb(146, 150, 163);
-	width: 170px;
-	padding: 1px 14px;
+	width: 180px;
+	padding: 1px 10px;
 	
 }
 
 .global-nav .form-search input {
 	margin-top: 7px;
-	margin-right: 20px;
+	margin-right: 15px;
+	width: 130px;
 	background-color: inherit;
 	border: none;
 	box-shadow: none;
@@ -106,7 +107,7 @@ body {
 .global-nav button {
 	border: 0;
   outline: none;
-  padding-left: 10px;
+  padding-left: 0px;
 }
 
 .nav {
@@ -162,6 +163,11 @@ body {
 	line-height: 1;
 }
 
+.Icon--small {
+	font-size: 16px;
+	line-height: 1;
+}
+
 .Icon {
 	background: transparent;
 	font-style: normal;
@@ -182,11 +188,15 @@ body {
 .Icon--connect:before { content: "\f050"; }
 .Icon--discover:before{ content: "\f052"; }
 .Icon--me:before { content: "\f056"; }
-.Icon--bird:before { content: "\f179"; color: #55acee; margin-top: 14px; margin-left: -224px;}
+.Icon--bird:before { content: "\f179"; color: #55acee; position: absolute;margin-top: -27px; margin-left: -10%; z-index: 1001;}
 .Icon--search:before { content: "\f058"; color: white;}
 .Icon--dm:before {content: "\f054";}
 .Icon--cog:before { content: "\f059";}
-.Icon--tweet:before {content: "\f029";}
+.Icon--tweet:before {content: "\f029"; }
+.Icon--reply:before {content:"\f151";}
+.Icon--retweet:before {content:"\f152";}
+.Icon--favorite:before {content:"\f147";}
+
 
 .nav > li > a .text {
 	float: left;
@@ -205,6 +215,55 @@ body {
 }
 #global-actions > li:hover {
 	color: rgb(0,132,180);
+}
+
+
+
+.nav > li {
+    color: #66757F;
+}
+
+.nav.right-actions > li > a{
+    height: 100%;
+    margin-right: 15px;
+    opacity: 0.6;
+    padding-right: 0px;
+    transition: all 0.15s ease-in-out 0s;
+}
+
+.nav.right-actions > li > a:hover {
+    color: #0084B4;
+    opacity: 1;
+}
+
+
+
+#global-new-tweet-button {
+    color: #FFF;
+    cursor: pointer;
+    height: 32px;
+    margin-top: 7px;
+    opacity: 0.7;
+    padding: 0px 7px 0px 8px;
+    background: none repeat scroll 0% 0% rgba(0, 132, 180, 0.8);
+    border-radius: 4px;
+}
+
+#global-new-tweet-button:hover {
+    opacity: 1;
+}
+
+#global-new-tweet-button > span {
+	margin: 4px 0px;
+
+}
+
+.tweet-btn, .tweet-btn:focus {
+    background: none repeat scroll 0% 0% rgba(0, 132, 180, 0.8);
+}
+
+.tweet-btn:hover, .tweet-btn:active {
+    background-color: #0084B4;
 }
 
 
@@ -239,11 +298,15 @@ body {
 	border: 1px solid #e1e8ed;
 	border-bottom: none;
 	position:relative;
+	clear:both;
 
 }
 
-.schit em {
+.schit:hover {
+	background-color:#f5f8fa;
+}
 
+.schit em {
 	font-weight: bold;
 	color: #292f33; 
 }
@@ -277,7 +340,7 @@ body {
   font-size: 12px;
 }
 
-.schit .flag {
+/*.schit .flag {
 	position: absolute;
 	font-size: 22px;
   right: 3px;
@@ -286,10 +349,33 @@ body {
   padding-top: 0px;
   color: #66757f;
   cursor: pointer;
+}*/
+
+/*.schit .flag.solid {
+ 	opacity: 0;
+}*/
+
+#tweet-actions{
+	display: inline-block;
+
+}
+#tweet-actions li {
+	/*float: left;*/
+	margin: 0px 10px;
+	float: left;
 }
 
-.schit .flag.solid {
- 	opacity: 0;
+#tweet-actions li a{
+	color: #66757F;
+	opacity: 0.4;
+	font-size: 12px;
+	background: inherit;
+	text-decoration: none;
+	
+}
+
+#tweet-actions li a:hover{
+	opacity: 0.6;
 }
 
 #schits-container #footer{
